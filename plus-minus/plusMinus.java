@@ -1,21 +1,20 @@
 public static void plusMinus(List<Integer> arr) {
-    long pos = 0;
-    long neg = 0;
+    long posCount = 0;
+    long negCount = 0;
     long nullCount = 0;
     int n = arr.size();
 
     for (int num : arr) {
         if (num > 0) {
-            pos++;
+            posCount++;
         } else if (num < 0) {
-            neg++;
+            negCount++;
         } else {
             nullCount++;
         }
     }
-
-    // Print results with floating-point division
-    System.out.printf("%.6f%n", (double) pos / n);
-    System.out.printf("%.6f%n", (double) neg / n);
+  
+    System.out.printf("%.6f%n", (double) posCount / n);
+    System.out.printf("%.6f%n", (double) negCount / n);
     System.out.printf("%.6f%n", (double) nullCount / n);
 }
